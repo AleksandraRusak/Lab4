@@ -86,6 +86,9 @@ export default function App() {
                   textAlign: "center",
                   backgroundColor: "white",
                   marginTop: 50,
+                  width: 100,
+                  fontWeight: "bold",
+                  alignSelf: "center",
                 }}
               >
                 {userName}
@@ -208,6 +211,7 @@ export default function App() {
                   inputValue == ""
                     ? setUserName("Guest")
                     : setUserName(inputValue);
+
                   inputValue == ""
                     ? setIcon(require("./assets/icon.png"))
                     : setIcon(require("./assets/profile.png"));
@@ -215,6 +219,8 @@ export default function App() {
                   inputValue == ""
                     ? setVisibleView(false)
                     : setVisibleView(true);
+
+                  inputValue == setModal((prevValue) => !prevValue);
                 }}
               />
             </View>
